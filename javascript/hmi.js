@@ -8,14 +8,14 @@ let hmi = function (p) {
     cv.parent("hmi");
 
     Amp1 = new Multimeter(p, 75, 90, 120, 120, [0, 3], "kA");
-    Watt1 = new Multimeter(p, 235, 90, 120, 120, [0, 1.25], "kW");
+    Watt1 = new Multimeter(p, 235, 90, 120, 120, [0, 1.25], "MW");
 
     Volt1 = new Multimeter(p, 75, 220, 120, 120, [0, 575], "V");
     Freq1 = new Multimeter(p, 235, 220, 120, 120, [0, 75], "Hz");
 
     synchroscope = new Synchroscope(p, 420, 155, 100);
 
-    Watt2 = new Multimeter(p, 605, 90, 120, 120, [0, 1.25], "kW");
+    Watt2 = new Multimeter(p, 605, 90, 120, 120, [0, 1.25], "MW");
     Amp2 = new Multimeter(p, 765, 90, 120, 120, [0, 3], "kA");
     
     Freq2 = new Multimeter(p, 605, 220, 120, 120, [0, 75], "Hz");
