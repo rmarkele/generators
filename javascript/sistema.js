@@ -59,8 +59,8 @@ let sys = function(p) {
       genAux.graph();
     }
 
-    theta1 += n1/1800*4 % 360;
-    theta2 += n2/1800*4 % 360;
+    theta1 += n1/1800*6 % 360;
+    theta2 += n2/1800*6 % 360;
 
     Lines.L11.draw();
     Lines.D11.draw();
