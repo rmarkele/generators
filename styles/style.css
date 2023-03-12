@@ -5,6 +5,7 @@ padding: 0;
 }
 header{
   margin: auto;
+  margin-top: 5px;
   background-color: rgb(173,162,144);
   max-width: 860px;
   display: flex;
