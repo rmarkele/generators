@@ -1,0 +1,258 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+header{
+  margin: auto;
+  background-color: rgb(173,162,144);
+  max-width: 860px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+header div{
+  background-color: rgb(80, 80, 80);
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-shadow: 0px 0px 5px rgb(97, 96, 96);
+  font-weight: bold;
+  color: white;
+}
+
+footer{
+  margin: auto;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  max-width: 860px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+footer div{
+  text-align: center;
+}
+/* main{
+  padding: 0px 5px;
+  background-color: rgb(173,162,144);
+} */
+
+.canvas-parent{
+  width: 860px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(173,162,144);
+}
+
+#sys{
+  width: 840px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  border-width: 8px;
+  border-style: inset;
+  box-shadow: 0px 0px 10px white;
+
+  /* border: 1px solid black; */
+}
+
+#hmi{
+  margin: auto;
+  max-width: 860px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(173,162,144);
+}
+
+.ctrl{
+
+  margin: auto;
+  width: 860px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(173,162,144);
+  padding: 0px 10px;
+}
+
+.left-control,
+.right-control{
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.left-control{
+  padding-right: 20px;
+  border-right: 2px solid black;
+}
+
+.right-control{
+  padding-left: 20px;
+  border-left: 2px solid black;
+}
+
+.i-campo,
+.sp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sp-desc{
+  margin: 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sp-val{
+  padding: 2px;
+  background-color: white;
+  width: 100px;
+  text-align: center;
+  border-style: inset;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  margin-bottom: 5px;
+  
+}
+
+.sp-val,
+.sp-val input{
+  transition: all ease .4s;
+}
+
+.sp-val.disabled,
+.sp-val.disabled input{
+  background-color: #888;
+  color:  #444;
+}
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+  width: 60px;
+  text-align: center;
+  border: 0;
+  font-size: 14px;
+  outline: none;
+}
+
+
+
+.t-button{
+  cursor: pointer;
+}
+
+.triangle-up.t-button:hover{
+  border-bottom-color: #444;
+}
+
+.triangle-down.t-button:hover{
+  border-top-color: #444;
+}
+
+.liga-desl{
+  display: flex;
+  flex-direction: column;
+  border-style: groove;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.liga-desl--desc{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-align: center;
+  
+}
+
+.liga-desl--buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.liga-desl--buttons span{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 5px;
+  font-weight: normal;
+}
+
+
+.liga-desl--buttons .on-button,
+.liga-desl--buttons .off-button{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+  box-shadow:2px 2px 5px #222 ;
+}
+
+
+.liga-desl--buttons .on-button{
+  background-color: #300;
+}
+
+.liga-desl--buttons .off-button{
+  background-color: #030;
+}
+
+.liga-desl--buttons .on-button:active,
+.liga-desl--buttons .off-button:active{
+  box-shadow:none;
+}
+
+.liga-desl--buttons .on-button.active{
+  background-color: #f00;
+  box-shadow: 0px 0px 10px #f00;
+}
+
+.liga-desl--buttons .off-button.active{
+  background-color: #0f0;
+  box-shadow: 0px 0px 10px #6f6;
+}
+
+
+.avr{
+  display: flex;
+  gap: 20px;
+}
+
+.fcol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sp-val{
+  display: none;
+}

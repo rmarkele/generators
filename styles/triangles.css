@@ -1,0 +1,46 @@
+.triangle-left {
+    color: white;
+    width: 0px;
+    height: 0px;
+    border: 20 solid black;
+    border-top-color: transparent;
+    border-right-color: black;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.triangle-up {
+    color: white;
+    width: 0px;
+    height: 0px;
+    border: 20px solid black;
+    border-top-width: 0px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: black;
+    border-left-color: transparent;
+}
+
+.triangle-right {
+    color: white;
+    width: 0px;
+    height: 0px;
+    border: 20px solid black;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: black;
+}
+
+.triangle-down {
+    color: white;
+    width: 0px;
+    height: 0px;
+    border: 20px solid black;
+    border-bottom-width: 0px;
+    border-top-color: black;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./javascript/p5.js"></script>
+    <!-- <script src="./javascript/p5.sound.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="./styles/triangles.css">
+    <link rel="stylesheet" type="text/css" href="./styles/switch.css">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <header>
+      <div>Sincronismo de Geradores</div>
+    </header>
+    <main>
+      <div class="canvas-parent">
+        <div id="sys"></div>
+      </div>
+      
+
+      <div id="hmi"></div>
+      
+      <div class="ctrl">
+        <div class="left-control">
+
+          <div class="fcol">
+            <div class="avr">
+              <div class="i-campo" id="campo-1">
+                <div class="sp-desc">
+                  campo
+                </div>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider">
+                    <div class="off">off</div>
+                    <div class="on">on</div>
+                  </span>
+                </label>
+              </div>
+      
+              <div class="sp" id="volt1">
+                <div class="sp-val">
+                  <input type="number" step="5" min="180" max="575" value="480"/> V
+                </div>
+      
+                <div class="triangle-up t-button" id="Volt1-inc"></div>
+                
+                <div class="sp-desc" >
+                  s.p. <br> Tensão
+                </div>
+                
+                <div class="triangle-down t-button" id="Volt1-dec">          </div>
+              </div>
+            </div>
+  
+            <div class="liga-desl disj">
+              <div class="liga-desl--desc">
+                Disjuntor 1
+              </div>
+              <div class="liga-desl--buttons" id="disj1" data-status="1">
+                <span>
+                  <div class="on-button active" ></div>
+                  fechar
+                </span>
+  
+                <span>
+                  <div class="off-button "></div>
+                  abrir
+                </span>
+  
+              </div>
+            </div>
+          </div>
+          
+  
+          <div class="fcol">
+            <div class="sp vel" id="vel1">
+              <div class="sp-val">
+                <input type="number" step="10" min="400" max="2250" value="2000"/> RPM
+              </div>
+    
+              <div class="triangle-up t-button " id="Vel1-inc"></div>
+              
+              <div class="sp-desc">
+                s.p. <br> Velocidade
+              </div>
+              
+              <div class="triangle-down t-button" id="Vel1-dec"></div>
+            </div>
+
+            <div class="liga-desl ger">
+              <div class="liga-desl--desc">
+                Gerador 1
+              </div>
+              <div class="liga-desl--buttons" id="gen1" data-status="1">
+                <span>
+                  <div class="on-button active"></div>
+                  Partir
+                </span>
+  
+                <span>
+                  <div class="off-button "></div>
+                  Parar
+                </span>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-control">
+          
+          <div class="fcol">
+            <div class="sp vel" id="vel2">
+              <div class="sp-val disabled">
+                <input type="number" step="10" min="400" max="2250" value="1600"/> RPM
+              </div>
+    
+              <div class="triangle-up t-button" id="Vel2-inc"></div>
+              
+              <div class="sp-desc">
+                s.p. <br> Velocidade
+              </div>
+              
+              <div class="triangle-down t-button" id="Vel2-dec"></div>
+            </div>
+
+            <div class="liga-desl ger">
+              <div class="liga-desl--desc">
+                Gerador 2
+              </div>
+              <div class="liga-desl--buttons" id="gen2" data-status="0">
+                <span>
+                  <div class="on-button" ></div>
+                  Partir
+                </span>
+  
+                <span>
+                  <div class="off-button active" ></div>
+                  Parar
+                </span>
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="fcol">
+            <div class="avr">
+              <div class="sp" id="volt2">
+                <div class="sp-val disabled">
+                  <input type="number" step="5" min="180" max="575" value="400"/> V
+                </div>
+      
+                <div class="triangle-up t-button" id="Volt2-inc"></div>
+                
+                <div class="sp-desc">
+                  s.p. <br> Tensão
+                </div>
+                
+                <div class="triangle-down t-button" id="Volt2-dec"></div>
+              </div>
+    
+              <div class="i-campo">
+                <div class="sp-desc">
+                  campo
+                </div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider">
+                    <div class="off">off</div>
+                    <div class="on">on</div>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="liga-desl disj">
+              <div class="liga-desl--desc">
+                Disjuntor 2
+              </div>
+              <div class="liga-desl--buttons" id="disj2" data-status="0">
+                <span>
+                  <div class="on-button"></div>
+                  fechar
+                </span>
+  
+                <span>
+                  <div class="off-button active"></div>
+                  abrir
+                </span>
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>      
+      </div>
+
+
+    </main>
+
+    <footer>
+      <div>
+        Renato Markele <br>
+        renato.markele@marinha.mil.br
+      </div>
+      <div>
+        Grupo Simulador <br> CIANA
+      </div>
+    </footer>
+
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/disj_fcn.js"></script>
+    <script src="./javascript/setpoint_fcn.js"></script>
+    <script src="./javascript/field_fcn.js"></script>
+    <script src="./javascript/aux_fnc.js"></script>
+    <script src="./javascript/sistema.js"></script>
+    <script src="./javascript/hmi.js"></script>
+    <script src="./javascript/Generator.js"></script>
+    <script src="./javascript/Lines.js"></script>
+    <script src="./javascript/CircuitBreaker.js"></script>
+    <script src="./javascript/Synchroscope.js"></script>
+    <script src="./javascript/Multimeter.js"></script>
+    
+  </body>
+</html>
